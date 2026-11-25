@@ -1,0 +1,8 @@
+{
+  "cases": 510,
+  "results_sha": "158e8d783cc5a92ae29918ed34a78678a7b1b836bc4123d9dd8c85aa0f254439",
+  "audit_sha": "550c7665172a989d626bc624430dd4f7aa24e6dac7346a5d6a75b4dfd10a5015",
+  "raw_sha256": "a1307b5706012c91e036fb941099c4c452c2bc2e68cc4a4a49c90b86fe874c4b",
+  "score_replays": 3060,
+  "matched_graphs": 20313
+}

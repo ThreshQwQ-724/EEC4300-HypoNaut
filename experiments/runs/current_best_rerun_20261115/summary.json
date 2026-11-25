@@ -1,0 +1,303 @@
+{
+  "boolean": {
+    "current": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.6465393308107124,
+          "valid_rate": 0.684375,
+          "novelty_rate": 0.93125,
+          "hits": 438
+        },
+        "upstream": {
+          "recovery_rate": 0.3819421157957342,
+          "valid_rate": 0.4140625,
+          "novelty_rate": 0.5375,
+          "hits": 265
+        }
+      },
+      "cost": {
+        "calls": 596,
+        "seconds": 124.62915709754452,
+        "checks": 0,
+        "input_tokens": 257798,
+        "output_tokens": 4708
+      },
+      "wtl": [
+        0,
+        80,
+        0
+      ]
+    },
+    "min_id": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.6526221889248205,
+          "valid_rate": 0.6890625,
+          "novelty_rate": 0.9171875,
+          "hits": 441
+        },
+        "upstream": {
+          "recovery_rate": 0.30824129488274227,
+          "valid_rate": 0.271875,
+          "novelty_rate": 0.2875,
+          "hits": 174
+        }
+      },
+      "cost": {
+        "calls": 0,
+        "seconds": 0,
+        "checks": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "wtl": [
+        14,
+        56,
+        10
+      ]
+    },
+    "ranked_program": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.660126517070596,
+          "valid_rate": 0.7234375,
+          "novelty_rate": 0.928125,
+          "hits": 463
+        },
+        "upstream": {
+          "recovery_rate": 0.3048109058273532,
+          "valid_rate": 0.275,
+          "novelty_rate": 0.3203125,
+          "hits": 176
+        }
+      },
+      "cost": {
+        "calls": 0,
+        "seconds": 0,
+        "checks": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "wtl": [
+        27,
+        39,
+        14
+      ]
+    },
+    "ranked_qwen": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.6607274786090576,
+          "valid_rate": 0.721875,
+          "novelty_rate": 0.9328125,
+          "hits": 462
+        },
+        "upstream": {
+          "recovery_rate": 0.376527617958539,
+          "valid_rate": 0.396875,
+          "novelty_rate": 0.49375,
+          "hits": 254
+        }
+      },
+      "cost": {
+        "calls": 597,
+        "seconds": 85.3805535978172,
+        "checks": 0,
+        "input_tokens": 111697,
+        "output_tokens": 4718
+      },
+      "wtl": [
+        28,
+        38,
+        14
+      ]
+    }
+  },
+  "3d": {
+    "current": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        },
+        "upstream": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        }
+      },
+      "cost": {
+        "calls": 84,
+        "seconds": 19.751937900437042,
+        "checks": 0,
+        "input_tokens": 57540,
+        "output_tokens": 588
+      },
+      "wtl": [
+        0,
+        84,
+        0
+      ],
+      "patterns": 4.0476190476190474,
+      "informative_patterns": 4.1
+    },
+    "shape_qwen": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        },
+        "upstream": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        }
+      },
+      "cost": {
+        "calls": 84,
+        "seconds": 16.764584300341085,
+        "checks": 0,
+        "input_tokens": 58296,
+        "output_tokens": 762
+      },
+      "wtl": [
+        0,
+        84,
+        0
+      ],
+      "patterns": 4.476190476190476,
+      "informative_patterns": 5
+    },
+    "shape_program": {
+      "scores": {
+        "corrected": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        },
+        "upstream": {
+          "recovery_rate": 0.2962962962962963,
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "hits": 672
+        }
+      },
+      "cost": {
+        "calls": 0,
+        "seconds": 0,
+        "checks": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "wtl": [
+        0,
+        84,
+        0
+      ],
+      "patterns": 4.476190476190476,
+      "informative_patterns": 5
+    }
+  },
+  "causal": {
+    "current": {
+      "scores": {
+        "upstream": {
+          "recovery_rate": 0.269279043472965,
+          "valid_rate": 0.8142156862745098,
+          "novelty_rate": 0.8142156862745098,
+          "hits": 3322
+        }
+      },
+      "cost": {
+        "calls": 3623,
+        "seconds": 515.8479020097293,
+        "checks": 4133,
+        "input_tokens": 0,
+        "output_tokens": 25331
+      },
+      "wtl": [
+        0,
+        510,
+        0
+      ],
+      "filled": {
+        "rr": 0.2748814182228548,
+        "hits": 3437,
+        "vr": 0.8424019607843137,
+        "nr": 0.8424019607843137,
+        "at_cap": 510,
+        "checks": 291,
+        "patterns": 6.1292682926829265
+      }
+    },
+    "batch_program": {
+      "scores": {
+        "upstream": {
+          "recovery_rate": 0.2708618103797175,
+          "valid_rate": 0.8379901960784314,
+          "novelty_rate": 0.8379901960784314,
+          "hits": 3419
+        }
+      },
+      "cost": {
+        "calls": 0,
+        "seconds": 0,
+        "checks": 3553,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "wtl": [
+        80,
+        425,
+        5
+      ],
+      "filled": {
+        "rr": 0.2748814182228548,
+        "hits": 3437,
+        "vr": 0.8424019607843137,
+        "nr": 0.8424019607843137,
+        "at_cap": 510,
+        "checks": 233,
+        "patterns": 7.019512195121951
+      }
+    },
+    "batch_qwen": {
+      "scores": {
+        "upstream": {
+          "recovery_rate": 0.2628754415856599,
+          "valid_rate": 0.799264705882353,
+          "novelty_rate": 0.799264705882353,
+          "hits": 3261
+        }
+      },
+      "cost": {
+        "calls": 934,
+        "seconds": 407.59731380362064,
+        "checks": 3782,
+        "input_tokens": 244278,
+        "output_tokens": 26440
+      },
+      "wtl": [
+        43,
+        385,
+        82
+      ],
+      "filled": {
+        "rr": 0.2748814182228548,
+        "hits": 3437,
+        "vr": 0.8424019607843137,
+        "nr": 0.8424019607843137,
+        "at_cap": 510,
+        "checks": 330,
+        "patterns": 7.053658536585366
+      }
+    }
+  }
+}

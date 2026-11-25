@@ -1,0 +1,86 @@
+{
+  "current": {
+    "before": {
+      "recovery_rate": 0.2628754415856599,
+      "valid_rate": 0.799264705882353,
+      "novelty_rate": 0.799264705882353,
+      "hits": 3261,
+      "at_cap": 396
+    },
+    "after": {
+      "recovery_rate": 0.2748814182228548,
+      "valid_rate": 0.8424019607843137,
+      "novelty_rate": 0.8424019607843137,
+      "hits": 3437,
+      "at_cap": 510
+    },
+    "cost": {
+      "calls": 934,
+      "checks": 3782,
+      "input_tokens": 244278,
+      "extra_checks": 330
+    },
+    "patterns": 7.053658536585366,
+    "paired_wtl": [
+      0,
+      510,
+      0
+    ]
+  },
+  "first_qwen": {
+    "before": {
+      "recovery_rate": 0.26977745119553737,
+      "valid_rate": 0.8242647058823529,
+      "novelty_rate": 0.8242647058823529,
+      "hits": 3363,
+      "at_cap": 445
+    },
+    "after": {
+      "recovery_rate": 0.2748814182228548,
+      "valid_rate": 0.8424019607843137,
+      "novelty_rate": 0.8424019607843137,
+      "hits": 3437,
+      "at_cap": 510
+    },
+    "cost": {
+      "calls": 456,
+      "checks": 3648,
+      "input_tokens": 112461,
+      "extra_checks": 283
+    },
+    "patterns": 7.087804878048781,
+    "paired_wtl": [
+      86,
+      424,
+      0
+    ]
+  },
+  "program": {
+    "before": {
+      "recovery_rate": 0.2708618103797175,
+      "valid_rate": 0.8379901960784314,
+      "novelty_rate": 0.8379901960784314,
+      "hits": 3419,
+      "at_cap": 495
+    },
+    "after": {
+      "recovery_rate": 0.2748814182228548,
+      "valid_rate": 0.8424019607843137,
+      "novelty_rate": 0.8424019607843137,
+      "hits": 3437,
+      "at_cap": 510
+    },
+    "cost": {
+      "calls": 0,
+      "checks": 3553,
+      "input_tokens": 0,
+      "extra_checks": 233
+    },
+    "patterns": 7.019512195121951,
+    "paired_wtl": [
+      112,
+      397,
+      1
+    ]
+  }
+}

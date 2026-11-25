@@ -1,0 +1,17 @@
+{
+  "model": "qwen3:8b",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "runner_sha": "316fe2052d10d7555b2b483d93514fe4155e5267058f369b5c4252f247caa844",
+  "baseline_sha": "9ac7c4319fe4da6105791d3c34a916189de32b334d5a09aa51a7f43300283554",
+  "seed": 14112028,
+  "slots": 8,
+  "full": true,
+  "reference_results_sha": "ed5d8798c31fd328542b799e6d7280f2e8e65cbd3d5e80ed09082eb69862f11e",
+  "boolean_baseline_sha": "71b3d6b1ea41a3e5e0f7f93537ab5d30f442959f8571948475e45916d298ecfc",
+  "dependencies": {
+    "run_qwen_guided_edits.py": "a4f6098a5d01a5ec2e7d9c461f9bdc5929e3eab61a5f2c0159ee2a4b4a9291e7",
+    "run_final_qwen_path_repair.py": "922fc89c67373c73aa58b25d8064eaf2641b1d05f8fae5d2b038abd0e93a849f",
+    "run_spatial_causal_followup.py": "a7d85faf59e5e2a074fb95c05e4f33f2666d45335d9a831588d0d2b42373895e",
+    "validated_evaluators.py": "7fb9c0988ecaf6f152b68d85a7b3c096aac6e13433e61841e18e9b07914056bf"
+  }
+}

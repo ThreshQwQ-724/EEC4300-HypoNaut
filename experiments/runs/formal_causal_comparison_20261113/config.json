@@ -1,0 +1,70 @@
+{
+  "cases": [
+    "n1_014",
+    "n1_019",
+    "n1_010",
+    "n1_027",
+    "n2_041",
+    "n2_008",
+    "n2_011",
+    "n2_058",
+    "n3_061",
+    "n3_049",
+    "n3_099",
+    "n3_007",
+    "n4_036",
+    "n4_021",
+    "n4_055",
+    "n4_058",
+    "n5_055",
+    "n5_015",
+    "n5_032",
+    "n5_028",
+    "n6_096",
+    "n6_021",
+    "n6_061",
+    "n6_029"
+  ],
+  "seed": 1020126,
+  "seeds": [
+    33550336,
+    33550337,
+    33550338
+  ],
+  "methods": [
+    "qwen_direct",
+    "fixed_unpruned",
+    "fixed_pruned",
+    "adaptive",
+    "program_add",
+    "program_risk",
+    "delete_risk",
+    "qwen_add"
+  ],
+  "slots": 8,
+  "menu": 8,
+  "model": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "ollama": {
+    "version": "0.40.16"
+  },
+  "options": {
+    "num_ctx": 4096,
+    "num_predict": 2048,
+    "top_k": 20,
+    "min_p": 0.0,
+    "repeat_penalty": 1.0,
+    "temperature": 0.6,
+    "top_p": 0.95
+  },
+  "source_sha": "5c102ec2e12da622892db06599d4e68e12124db95ef9f49d777e77a069c92465",
+  "evaluator_sha": "eb7cb2cbd6f33e45468f7df2ddd41795106a7765b383af90b7628181436d5358",
+  "code_hashes": {
+    "run_formal_causal_comparison.py": "75619ad42b7a9f1046645628b3856dcf69da4489de3d41ac42583ab6a70e349e",
+    "validate_program_risk_search.py": "5cf12bafdc8f2535e46ccb6bb624b9ce4dd6ffb0764ba1ec47a9e74f26409a02",
+    "evaluate_qwen_risk_trigger.py": "0402af748f213565fc2d5ada39336b8fbda259dd80071071af72a6a31858190f",
+    "solve_partial_graph.py": "f6aa7b5bf2f75e6fae2284e16a79e4fcbfdcc5cccc2a9a2ae0508251cb677b30",
+    "run_qwen_tight_budget.py": "21874a51f8a1065b81a923a10b12dfe2938a784bb612204d50648206cfe862be",
+    "run_partial_graph_pipeline.py": "ed90808ef574b7f940c381b44b879ae4f0d2d06c6a92c9fde10b1003edd66258",
+    "run_qwen_guided_edits.py": "a4f6098a5d01a5ec2e7d9c461f9bdc5929e3eab61a5f2c0159ee2a4b4a9291e7"
+  }
+}

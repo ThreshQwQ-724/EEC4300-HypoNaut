@@ -1,0 +1,70 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 33550338
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "choices": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        }
+      },
+      "required": [
+        "choices"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank the best candidate DAGs by likelihood of matching all observations. A node reaches exactly the nodes marked 1 along directed paths. Avoid cycles. Return 4 distinct IDs in priority order.\nObservations:\nPerturb(A) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(C) -> A:0 B:0 C:0 D:0 E:0 F:1\nPerturb(E) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(F) -> A:0 B:0 C:0 D:0 E:0 F:0\nCandidates:\n1. Graph: No edges\n2. Graph: B->A, C->F\n3. Graph: B->C, C->F\n4. Graph: B->D, C->F\n5. Graph: B->E, C->F\n6. Graph: B->F, C->F\n7. Graph: C->F, D->A\n8. Graph: C->F, D->B"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T04:32:47.105671Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"choices\": [\n    6,\n    5,\n    4,\n    3\n  ]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 462948300,
+    "load_duration": 2098400,
+    "prompt_eval_count": 249,
+    "prompt_eval_cached_count": 3,
+    "prompt_eval_duration": 58851000,
+    "eval_count": 29,
+    "eval_duration": 386381000
+  },
+  "seconds": 0.4635861001443118
+}

@@ -1,0 +1,68 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 33550338
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "choices": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          }
+        }
+      },
+      "required": [
+        "choices"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank the best candidate DAGs by likelihood of matching all observations. A node reaches exactly the nodes marked 1 along directed paths. Avoid cycles. Return 4 distinct IDs in priority order.\nObservations:\nPerturb(B) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(C) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(D) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(E) -> A:0 B:0 C:1 D:0 E:0 F:0\nPerturb(F) -> A:0 B:0 C:0 D:0 E:0 F:0\nCandidates:\n1. Graph: No edges\n2. Graph: A->B, E->C\n3. Graph: A->C, E->C\n4. Graph: A->D, E->C\n5. Graph: A->E, E->C\n6. Graph: A->F, E->C"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T04:34:59.1865533Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"choices\": [\n    5,\n    3,\n    2,\n    6\n  ]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 447565900,
+    "load_duration": 1533300,
+    "prompt_eval_count": 250,
+    "prompt_eval_cached_count": 133,
+    "prompt_eval_duration": 41888000,
+    "eval_count": 29,
+    "eval_duration": 386910000
+  },
+  "seconds": 0.4484342001378536
+}

@@ -1,0 +1,74 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 14592
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          }
+        }
+      },
+      "required": [
+        "ids"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank exactly two different representative IDs by consistency with ALL given observations. Operators AND, OR, XOR are binary, and NOT is unary. Group members share the representative's outputs on the observed rows. Return JSON with a ranked integer array named ids.\nObservations:\na=0 b=0 c=1 d=1 => 0\na=0 b=1 c=1 d=1 => 0\na=1 b=0 c=1 d=0 => 1\na=1 b=1 c=1 d=0 => 1\nCandidate representatives:\n1: OR(c,AND(OR(d,d),b)) (group size 38)\n2: NOT(OR(AND(a,a),d)) (group size 36)\n3: a (group size 27)\n4: XOR(b,XOR(XOR(c,b),AND(c,a))) (group size 24)\n5: XOR(OR(d,XOR(d,b)),NOT(AND(b,b))) (group size 15)\n6: NOT(b) (group size 14)\n7: AND(XOR(OR(c,c),NOT(b)),XOR(AND(b,b),d)) (group size 14)\n8: NOT(OR(XOR(c,d),OR(b,a))) (group size 12)\n9: OR(d,OR(XOR(c,b),XOR(c,c))) (group size 12)\n10: AND(NOT(XOR(a,b)),AND(OR(c,b),OR(a,d))) (group size 11)\n11: b (group size 10)\n12: XOR(OR(XOR(a,b),OR(b,c)),AND(NOT(b),a)) (group size 10)"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T09:06:18.6282763Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"ids\": [11, 6]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 183537300,
+    "load_duration": 1564000,
+    "prompt_eval_count": 383,
+    "prompt_eval_cached_count": 382,
+    "prompt_eval_duration": 22411000,
+    "eval_count": 14,
+    "eval_duration": 156913000
+  },
+  "seconds": 0.18434219993650913
+}

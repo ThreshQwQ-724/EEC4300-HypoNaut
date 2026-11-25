@@ -1,0 +1,70 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 33550338
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "choices": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        }
+      },
+      "required": [
+        "choices"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank the best candidate DAGs by likelihood of matching all observations. A node reaches exactly the nodes marked 1 along directed paths. Avoid cycles. Return 4 distinct IDs in priority order.\nObservations:\nPerturb(C) -> A:0 B:0 C:0 D:0 E:1 F:0\nCandidates:\n1. Graph: No edges\n2. Graph: A->B, C->E\n3. Graph: A->C, C->E\n4. Graph: A->D, C->E\n5. Graph: A->E, C->E\n6. Graph: A->F, C->E\n7. Graph: B->A, C->E\n8. Graph: B->C, C->E"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T04:24:14.1836875Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"choices\": [\n    5,\n    3,\n    2,\n    8\n  ]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 447857800,
+    "load_duration": 1544500,
+    "prompt_eval_count": 174,
+    "prompt_eval_cached_count": 61,
+    "prompt_eval_duration": 40604000,
+    "eval_count": 29,
+    "eval_duration": 387391000
+  },
+  "seconds": 0.4485862001311034
+}

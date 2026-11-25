@@ -1,0 +1,74 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 14591
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "ids": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          }
+        }
+      },
+      "required": [
+        "ids"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank exactly two different representative IDs by consistency with ALL given observations. Operators AND, OR, XOR are binary, and NOT is unary. Group members share the representative's outputs on the observed rows. Return JSON with a ranked integer array named ids.\nObservations:\na=0 b=0 c=0 d=0 => 0\na=0 b=0 c=0 d=1 => 1\na=0 b=0 c=1 d=0 => 1\na=0 b=1 c=0 d=0 => 0\na=0 b=1 c=1 d=1 => 0\na=1 b=1 c=1 d=1 => 0\nCandidate representatives:\n1: AND(AND(c,OR(b,a)),XOR(d,OR(b,c))) (group size 22)\n2: OR(c,AND(OR(d,d),b)) (group size 11)\n3: a (group size 10)\n4: NOT(OR(XOR(c,b),NOT(c))) (group size 9)\n5: XOR(OR(NOT(d),NOT(b)),NOT(b)) (group size 9)\n6: NOT(NOT(NOT(a))) (group size 9)\n7: AND(XOR(OR(c,c),NOT(b)),XOR(AND(b,b),d)) (group size 8)\n8: OR(d,OR(XOR(c,b),XOR(c,c))) (group size 8)\n9: NOT(AND(b,OR(c,a))) (group size 8)\n10: XOR(AND(AND(d,c),AND(b,d)),XOR(NOT(c),XOR(a,a))) (group size 7)\n11: OR(XOR(c,XOR(c,c)),AND(NOT(a),NOT(c))) (group size 6)\n12: NOT(XOR(AND(b,d),AND(b,b))) (group size 6)"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T09:06:24.017715Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"ids\": [3, 1]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 245516000,
+    "load_duration": 1549800,
+    "prompt_eval_count": 424,
+    "prompt_eval_cached_count": 69,
+    "prompt_eval_duration": 80968000,
+    "eval_count": 13,
+    "eval_duration": 144187000
+  },
+  "seconds": 0.2468386001419276
+}

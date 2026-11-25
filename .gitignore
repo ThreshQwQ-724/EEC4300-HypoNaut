@@ -1,0 +1,8 @@
+.venv/
+.env
+.env.*
+__pycache__/
+experiments/.deps/
+HypoSpace_datasets/
+upstream/
+experiments/runs/new_run*/

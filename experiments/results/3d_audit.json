@@ -1,0 +1,50 @@
+{
+  "source_sha256": "aeb0b4ee74e189a0d4697a611e2d2098bf9e7c59488e35f374356ad6568bce40",
+  "metadata": {
+    "grid_size": 3,
+    "max_blocks": 3,
+    "max_height": 3,
+    "n_observation_sets": 84,
+    "generated_at": "2026-11-10T05:24:07.145539"
+  },
+  "observations_checked": 84,
+  "gt_entries_checked": 2268,
+  "completeness": "All 84 projections and all 27 height assignments per projection independently enumerated.",
+  "errors": [],
+  "stored_hash_mismatch_count": 0,
+  "stored_hash_mismatch_examples": [],
+  "validator_edge_checks": [
+    {
+      "case": "valid",
+      "official_valid": true,
+      "strict_valid": true,
+      "corrected_valid": true
+    },
+    {
+      "case": "too_tall",
+      "official_valid": true,
+      "strict_valid": false,
+      "corrected_valid": false
+    },
+    {
+      "case": "unsupported",
+      "official_valid": false,
+      "strict_valid": false,
+      "corrected_valid": false
+    },
+    {
+      "case": "wrong_projection",
+      "official_valid": false,
+      "strict_valid": false,
+      "corrected_valid": false
+    }
+  ],
+  "metric_fixture_passed": true,
+  "upstream_zero_structure_crash": "The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()",
+  "corrected_metric_fixture": {
+    "valid_rate": 0.5,
+    "novelty_rate": 0.5,
+    "recovery_rate": 0.037037037037037035
+  },
+  "official_corrected_independent_parity": true
+}

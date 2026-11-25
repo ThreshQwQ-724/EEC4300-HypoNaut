@@ -1,0 +1,551 @@
+{
+  "boolean": {
+    "tasks": 80,
+    "ceiling": 0.7502024388340178,
+    "methods": {
+      "direct": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 0.0515625,
+            "novelty_rate": 0.0265625,
+            "recovery_rate": 0.005171892671892672,
+            "parse_success_rate": 1.0,
+            "hits": 5
+          },
+          "upstream": {
+            "valid_rate": 0.1125,
+            "novelty_rate": 0.0203125,
+            "recovery_rate": 0.0016004641004641004,
+            "parse_success_rate": 1.0,
+            "hits": 3
+          }
+        },
+        "cost": {
+          "calls": 640,
+          "output_tokens": 7972,
+          "seconds": 159.9907936018426,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      },
+      "enhanced": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 0.23125,
+            "novelty_rate": 1.0,
+            "recovery_rate": 0.16702639352310406,
+            "parse_success_rate": 1.0,
+            "hits": 148
+          },
+          "upstream": {
+            "valid_rate": 0.096875,
+            "novelty_rate": 0.4625,
+            "recovery_rate": 0.08426457222674327,
+            "parse_success_rate": 1.0,
+            "hits": 62
+          }
+        },
+        "cost": {
+          "calls": 640,
+          "output_tokens": 5504,
+          "seconds": 212.10014880029485,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      },
+      "reference": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 0.834375,
+            "novelty_rate": 0.834375,
+            "recovery_rate": 0.7502024388340178,
+            "parse_success_rate": 0.834375,
+            "hits": 534
+          },
+          "upstream": {
+            "valid_rate": 0.35625,
+            "novelty_rate": 0.35625,
+            "recovery_rate": 0.37351158015302754,
+            "parse_success_rate": 0.834375,
+            "hits": 228
+          }
+        },
+        "cost": {
+          "calls": 0,
+          "output_tokens": 0,
+          "seconds": 0,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      }
+    },
+    "paired": {
+      "enhanced": [
+        61,
+        18,
+        1
+      ]
+    },
+    "strata": {
+      "1": {
+        "tasks": 8,
+        "direct": {
+          "valid_rate": 0.25,
+          "novelty_rate": 0.046875,
+          "recovery_rate": 0.007842664092664093,
+          "parse_success_rate": 1.0
+        },
+        "enhanced": {
+          "valid_rate": 0.53125,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.13066083000293527,
+          "parse_success_rate": 1.0
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.2544469657627552,
+          "parse_success_rate": 1.0
+        }
+      },
+      "2": {
+        "tasks": 24,
+        "direct": {
+          "valid_rate": 0.041666666666666664,
+          "novelty_rate": 0.010416666666666666,
+          "recovery_rate": 0.001893939393939394,
+          "parse_success_rate": 1.0
+        },
+        "enhanced": {
+          "valid_rate": 0.3229166666666667,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.15999018342768342,
+          "parse_success_rate": 1.0
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.5388292263292264,
+          "parse_success_rate": 1.0
+        }
+      },
+      "3": {
+        "tasks": 32,
+        "direct": {
+          "valid_rate": 0.03515625,
+          "novelty_rate": 0.02734375,
+          "recovery_rate": 0.009548611111111112,
+          "parse_success_rate": 1.0
+        },
+        "enhanced": {
+          "valid_rate": 0.1640625,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.18822544642857142,
+          "parse_success_rate": 1.0
+        },
+        "reference": {
+          "valid_rate": 0.8515625,
+          "novelty_rate": 0.8515625,
+          "recovery_rate": 0.9197916666666667,
+          "parse_success_rate": 0.8515625
+        }
+      },
+      "4": {
+        "tasks": 16,
+        "direct": {
+          "valid_rate": 0.0,
+          "novelty_rate": 0.0390625,
+          "recovery_rate": 0.0,
+          "parse_success_rate": 1.0
+        },
+        "enhanced": {
+          "valid_rate": 0.078125,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.15336538461538463,
+          "parse_success_rate": 1.0
+        },
+        "reference": {
+          "valid_rate": 0.46875,
+          "novelty_rate": 0.46875,
+          "recovery_rate": 0.9759615384615384,
+          "parse_success_rate": 0.46875
+        }
+      }
+    }
+  },
+  "3d": {
+    "tasks": 84,
+    "ceiling": 0.2962962962962963,
+    "methods": {
+      "direct": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 0.2961309523809524,
+            "novelty_rate": 0.3869047619047619,
+            "recovery_rate": 0.03747795414462081,
+            "parse_success_rate": 0.9985119047619048,
+            "hits": 85
+          },
+          "upstream": {
+            "valid_rate": 0.2961309523809524,
+            "novelty_rate": 0.3869047619047619,
+            "recovery_rate": 0.03747795414462081,
+            "parse_success_rate": 0.9985119047619048,
+            "hits": 85
+          }
+        },
+        "cost": {
+          "calls": 672,
+          "output_tokens": 144365,
+          "seconds": 1853.0896485978737,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      },
+      "enhanced": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 1.0,
+            "novelty_rate": 0.6830357142857143,
+            "recovery_rate": 0.20238095238095238,
+            "parse_success_rate": 1.0,
+            "hits": 459
+          },
+          "upstream": {
+            "valid_rate": 1.0,
+            "novelty_rate": 0.6830357142857143,
+            "recovery_rate": 0.20238095238095238,
+            "parse_success_rate": 1.0,
+            "hits": 459
+          }
+        },
+        "cost": {
+          "calls": 672,
+          "output_tokens": 10611,
+          "seconds": 148.17338270088658,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      },
+      "reference": {
+        "scores": {
+          "corrected": {
+            "valid_rate": 1.0,
+            "novelty_rate": 1.0,
+            "recovery_rate": 0.2962962962962963,
+            "parse_success_rate": 1.0,
+            "hits": 672
+          },
+          "upstream": {
+            "valid_rate": 1.0,
+            "novelty_rate": 1.0,
+            "recovery_rate": 0.2962962962962963,
+            "parse_success_rate": 1.0,
+            "hits": 672
+          }
+        },
+        "cost": {
+          "calls": 0,
+          "output_tokens": 0,
+          "seconds": 0,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      }
+    },
+    "paired": {
+      "enhanced": [
+        84,
+        0,
+        0
+      ]
+    },
+    "strata": {
+      "1": {
+        "tasks": 84,
+        "direct": {
+          "valid_rate": 0.2961309523809524,
+          "novelty_rate": 0.3869047619047619,
+          "recovery_rate": 0.03747795414462081,
+          "parse_success_rate": 0.9985119047619048
+        },
+        "enhanced": {
+          "valid_rate": 1.0,
+          "novelty_rate": 0.6830357142857143,
+          "recovery_rate": 0.20238095238095238,
+          "parse_success_rate": 1.0
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.2962962962962963,
+          "parse_success_rate": 1.0
+        }
+      }
+    }
+  },
+  "causal": {
+    "tasks": 510,
+    "ceiling": 0.2748814182228548,
+    "methods": {
+      "direct": {
+        "scores": {
+          "upstream": {
+            "valid_rate": 0.16544117647058823,
+            "novelty_rate": 0.23504901960784313,
+            "recovery_rate": 0.062276021618262206,
+            "parse_success_rate": 0.7916666666666666,
+            "hits": 149
+          }
+        },
+        "cost": {
+          "calls": 4080,
+          "output_tokens": 95375,
+          "seconds": 1397.6803854994942,
+          "checks": 0,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      },
+      "enhanced": {
+        "scores": {
+          "upstream": {
+            "valid_rate": 0.8105392156862745,
+            "novelty_rate": 0.8105392156862745,
+            "recovery_rate": 0.2694743188438184,
+            "parse_success_rate": 0.8105392156862745,
+            "hits": 3307
+          }
+        },
+        "cost": {
+          "calls": 3614,
+          "output_tokens": 25264,
+          "seconds": 614.9079194029327,
+          "checks": 4124,
+          "rescues": 453,
+          "repair_attempts": 629
+        }
+      },
+      "repair": {
+        "scores": {
+          "upstream": {
+            "valid_rate": 0.7306372549019607,
+            "novelty_rate": 0.7306372549019607,
+            "recovery_rate": 0.2512691072662854,
+            "parse_success_rate": 0.7306372549019607,
+            "hits": 2981
+          }
+        },
+        "cost": {
+          "calls": 3697,
+          "output_tokens": 34219,
+          "seconds": 757.7810960025527,
+          "checks": 3718,
+          "rescues": 60,
+          "repair_attempts": 643
+        }
+      },
+      "reference": {
+        "scores": {
+          "upstream": {
+            "valid_rate": 0.8424019607843137,
+            "novelty_rate": 0.8424019607843137,
+            "recovery_rate": 0.2748814182228548,
+            "parse_success_rate": 0.8424019607843137,
+            "hits": 3437
+          }
+        },
+        "cost": {
+          "calls": 0,
+          "output_tokens": 0,
+          "seconds": 0,
+          "checks": 628,
+          "rescues": 0,
+          "repair_attempts": 0
+        }
+      }
+    },
+    "paired": {
+      "enhanced": [
+        482,
+        28,
+        0
+      ],
+      "repair": [
+        482,
+        28,
+        0
+      ]
+    },
+    "strata": {
+      "1": {
+        "tasks": 29,
+        "direct": {
+          "valid_rate": 0.25862068965517243,
+          "novelty_rate": 0.19827586206896552,
+          "recovery_rate": 2.112172243875803e-06,
+          "parse_success_rate": 0.9094827586206896
+        },
+        "enhanced": {
+          "valid_rate": 0.9913793103448276,
+          "novelty_rate": 0.9913793103448276,
+          "recovery_rate": 6.064127880783256e-05,
+          "parse_success_rate": 0.9913793103448276
+        },
+        "repair": {
+          "valid_rate": 0.9224137931034483,
+          "novelty_rate": 0.9224137931034483,
+          "recovery_rate": 5.45204352266934e-05,
+          "parse_success_rate": 0.9224137931034483
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 6.106304792636845e-05,
+          "parse_success_rate": 1.0
+        }
+      },
+      "2": {
+        "tasks": 81,
+        "direct": {
+          "valid_rate": 0.1867283950617284,
+          "novelty_rate": 0.23148148148148148,
+          "recovery_rate": 2.544059772670243e-06,
+          "parse_success_rate": 0.8595679012345679
+        },
+        "enhanced": {
+          "valid_rate": 0.9753086419753086,
+          "novelty_rate": 0.9753086419753086,
+          "recovery_rate": 0.000502745721959391,
+          "parse_success_rate": 0.9753086419753086
+        },
+        "repair": {
+          "valid_rate": 0.9197530864197531,
+          "novelty_rate": 0.9197530864197531,
+          "recovery_rate": 0.000469268639413658,
+          "parse_success_rate": 0.9197530864197531
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.0005283595753732711,
+          "parse_success_rate": 1.0
+        }
+      },
+      "3": {
+        "tasks": 100,
+        "direct": {
+          "valid_rate": 0.21125,
+          "novelty_rate": 0.2325,
+          "recovery_rate": 0.00040798554817373777,
+          "parse_success_rate": 0.77375
+        },
+        "enhanced": {
+          "valid_rate": 0.975,
+          "novelty_rate": 0.975,
+          "recovery_rate": 0.013836909596315583,
+          "parse_success_rate": 0.975
+        },
+        "repair": {
+          "valid_rate": 0.905,
+          "novelty_rate": 0.905,
+          "recovery_rate": 0.01295428791691365,
+          "parse_success_rate": 0.905
+        },
+        "reference": {
+          "valid_rate": 1.0,
+          "novelty_rate": 1.0,
+          "recovery_rate": 0.016238442477272384,
+          "parse_success_rate": 1.0
+        }
+      },
+      "4": {
+        "tasks": 100,
+        "direct": {
+          "valid_rate": 0.185,
+          "novelty_rate": 0.22,
+          "recovery_rate": 0.002575534113642016,
+          "parse_success_rate": 0.78125
+        },
+        "enhanced": {
+          "valid_rate": 0.93375,
+          "novelty_rate": 0.93375,
+          "recovery_rate": 0.08196165849519563,
+          "parse_success_rate": 0.93375
+        },
+        "repair": {
+          "valid_rate": 0.83625,
+          "novelty_rate": 0.83625,
+          "recovery_rate": 0.07539110408263076,
+          "parse_success_rate": 0.83625
+        },
+        "reference": {
+          "valid_rate": 0.99125,
+          "novelty_rate": 0.99125,
+          "recovery_rate": 0.08482887999708248,
+          "parse_success_rate": 0.99125
+        }
+      },
+      "5": {
+        "tasks": 100,
+        "direct": {
+          "valid_rate": 0.11375,
+          "novelty_rate": 0.2575,
+          "recovery_rate": 0.0358715173729549,
+          "parse_success_rate": 0.8025
+        },
+        "enhanced": {
+          "valid_rate": 0.78875,
+          "novelty_rate": 0.78875,
+          "recovery_rate": 0.3891328177920679,
+          "parse_success_rate": 0.78875
+        },
+        "repair": {
+          "valid_rate": 0.67875,
+          "novelty_rate": 0.67875,
+          "recovery_rate": 0.3612220297589645,
+          "parse_success_rate": 0.67875
+        },
+        "reference": {
+          "valid_rate": 0.825,
+          "novelty_rate": 0.825,
+          "recovery_rate": 0.3971307272281127,
+          "parse_success_rate": 0.825
+        }
+      },
+      "6": {
+        "tasks": 100,
+        "direct": {
+          "valid_rate": 0.1075,
+          "novelty_rate": 0.24375,
+          "recovery_rate": 0.27875,
+          "parse_success_rate": 0.72
+        },
+        "enhanced": {
+          "valid_rate": 0.35875,
+          "novelty_rate": 0.35875,
+          "recovery_rate": 0.8889628302142534,
+          "parse_success_rate": 0.35875
+        },
+        "repair": {
+          "valid_rate": 0.29375,
+          "novelty_rate": 0.29375,
+          "recovery_rate": 0.8315091067754058,
+          "parse_success_rate": 0.29375
+        },
+        "reference": {
+          "valid_rate": 0.38,
+          "novelty_rate": 0.38,
+          "recovery_rate": 0.9032515036941408,
+          "parse_success_rate": 0.38
+        }
+      }
+    }
+  }
+}

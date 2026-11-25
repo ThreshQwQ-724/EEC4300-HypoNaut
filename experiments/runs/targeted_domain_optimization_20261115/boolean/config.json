@@ -1,0 +1,8 @@
+{
+  "model": "qwen3:8b",
+  "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "slots": 8,
+  "sample_seed": 20261115,
+  "baseline_sha": "93d47ed9db7b18d074c8c829ee8523bc83bb4783919d8582f858ede745793c0d",
+  "runner_sha": "311891de1200a60d93b7098eb2f95a7905f93a8b8fdcf705d2a164e99ba36e3f"
+}

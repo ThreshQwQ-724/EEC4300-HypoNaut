@@ -1,0 +1,70 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 33550339
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "choices": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          }
+        }
+      },
+      "required": [
+        "choices"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Rank the best candidate DAGs by likelihood of matching all observations. A node reaches exactly the nodes marked 1 along directed paths. Avoid cycles. Return 4 distinct IDs in priority order.\nObservations:\nPerturb(B) -> A:1 B:0 C:0 D:1 E:1 F:1\nPerturb(C) -> A:1 B:1 C:0 D:1 E:1 F:1\nPerturb(D) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(E) -> A:0 B:0 C:0 D:0 E:0 F:0\nPerturb(F) -> A:1 B:0 C:0 D:1 E:1 F:0\nCandidates:\n1. Graph: A->D, B->F, C->B, F->A, F->D, F->E\n2. Graph: A->E, B->F, C->B, F->A, F->D, F->E\n3. Graph: B->A, B->F, C->B, F->A, F->D, F->E\n4. Graph: B->D, B->F, C->B, F->A, F->D, F->E\n5. Graph: B->F, C->B, F->A, F->D\n6. Graph: B->F, C->B, F->A, F->E\n7. Graph: B->F, C->B, F->D, F->E\n8. Graph: B->F, F->A, F->D, F->E"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T04:56:34.7927926Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\n  \"choices\": [\n    4,\n    1,\n    2,\n    3\n  ]\n}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 469123900,
+    "load_duration": 1547100,
+    "prompt_eval_count": 375,
+    "prompt_eval_cached_count": 47,
+    "prompt_eval_duration": 73242000,
+    "eval_count": 29,
+    "eval_duration": 384567000
+  },
+  "seconds": 0.47028500004671514
+}

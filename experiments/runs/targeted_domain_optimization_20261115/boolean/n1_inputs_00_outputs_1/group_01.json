@@ -1,0 +1,58 @@
+{
+  "request": {
+    "model": "qwen3:8b",
+    "think": false,
+    "stream": false,
+    "keep_alive": "10m",
+    "options": {
+      "num_ctx": 4096,
+      "num_predict": 96,
+      "top_k": 20,
+      "min_p": 0.0,
+      "repeat_penalty": 1.0,
+      "temperature": 0.6,
+      "top_p": 0.95,
+      "seed": 33550337
+    },
+    "format": {
+      "type": "object",
+      "properties": {
+        "choice": {
+          "type": "integer",
+          "enum": [
+            2,
+            1
+          ]
+        }
+      },
+      "required": [
+        "choice"
+      ],
+      "additionalProperties": false
+    },
+    "messages": [
+      {
+        "role": "user",
+        "content": "Choose the representative formula that matches every observation. Evaluate its logic. Each group shares its outputs on these inputs. Return only its JSON choice ID.\nObservations:\n{'x': 0, 'y': 0} -> 1\nRepresentative formulas:\n2. (x  OR  y)  AND  NOT (x  OR  y) (40 formulas have the same outputs)\n1. (x  AND  y)  OR  NOT (x  OR  y) (25 formulas have the same outputs)"
+      }
+    ]
+  },
+  "response": {
+    "model": "qwen3:8b",
+    "created_at": "2026-11-15T04:55:20.6455328Z",
+    "message": {
+      "role": "assistant",
+      "content": "{\"choice\": 1}"
+    },
+    "done": true,
+    "done_reason": "stop",
+    "total_duration": 114462000,
+    "load_duration": 2159100,
+    "prompt_eval_count": 126,
+    "prompt_eval_cached_count": 49,
+    "prompt_eval_duration": 24768000,
+    "eval_count": 7,
+    "eval_duration": 82044000
+  },
+  "seconds": 0.11578400013968349
+}

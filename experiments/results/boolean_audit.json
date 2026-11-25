@@ -1,0 +1,1843 @@
+{
+  "kind": "GT_ORACLE_REPLAY_DIAGNOSTIC_NOT_LLM",
+  "source_sha256": "060a0851920e3b91a52c03cc36ef49db0bfbb78eb5b3438e6f78f41cbf05bee9",
+  "upstream_commit": "c69e9318577b34b5b896996571aefd4ba6053f58",
+  "metadata": {
+    "variables": [
+      "x",
+      "y"
+    ],
+    "operators": [
+      "NOR",
+      "OR",
+      "NOT",
+      "AND"
+    ],
+    "max_depth": 2,
+    "hypothesis_space_size": 65,
+    "semantic_unique_count": 16,
+    "mechanistic_opts": {
+      "apply_commutativity": true,
+      "apply_idempotence_and_or": true,
+      "flatten_associativity": true
+    },
+    "total_observation_sets": 80
+  },
+  "observation_sets": 80,
+  "gt_entries": 975,
+  "distinct_stored_keys": 65,
+  "distinct_semantics": 16,
+  "problematic_distinct_expressions": 31,
+  "regenerated_grammar_size": 65,
+  "regenerated_grammar_matches_supplied_keys": true,
+  "in_space_rejections": 31,
+  "key_mismatches": 0,
+  "truth_table_mismatches": 0,
+  "gt_entries_rejected_by_official": 465,
+  "instances_with_oracle_rr_below_one": 79,
+  "corrected_instances_with_oracle_rr_below_one": 0,
+  "scope": "Full supplied dataset consistency and official roundtrip; independent grammar completeness NOT established.",
+  "problems": [
+    {
+      "formula": "NOT (NOT (x  OR  y))",
+      "stored_key": "('NOT', ('NOR', (('VAR', 'x'), ('VAR', 'y'))))",
+      "computed_key": "('NOT', ('NOR', (('VAR', 'x'), ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "x  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "y  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "x  AND  y  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "(x  OR  y)  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('OR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  NOT x)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  NOT y)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "computed_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT (y  OR  NOT x)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (y  OR  NOT y)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (y  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT (NOT x  OR  NOT y)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'x')), ('NOT', ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (NOT x  OR  (x  AND  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  y  OR  NOT x)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'x')), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (NOT x  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "computed_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT (NOT y  OR  (x  AND  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  y  OR  NOT y)",
+      "stored_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOT', ('VAR', 'y')), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (NOT y  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "computed_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT ((x  AND  y)  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT (x  OR  y  OR  NOT (x  OR  y))",
+      "stored_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 4
+    },
+    {
+      "formula": "NOT x  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT y  AND  NOT (x  OR  y)",
+      "stored_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "computed_key": "('AND', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "x  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "computed_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "y  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "computed_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT x  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "computed_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'x'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT y  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "computed_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('NOT', ('VAR', 'y'))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "(x  AND  y)  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "computed_key": "('OR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('NOR', (('VAR', 'x'), ('VAR', 'y')))))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "x  OR  y  OR  NOT (x  OR  y)",
+      "stored_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('OR', (('NOR', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  (x  AND  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (y  OR  (x  AND  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    },
+    {
+      "formula": "NOT (x  OR  y  OR  (x  AND  y))",
+      "stored_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "computed_key": "('NOR', (('AND', (('VAR', 'x'), ('VAR', 'y'))), ('VAR', 'x'), ('VAR', 'y')))",
+      "in_space": false,
+      "key_matches": true,
+      "truth_table_matches": true,
+      "sympy_depth": 3
+    }
+  ],
+  "instances": [
+    {
+      "id": "n1_inputs_00_outputs_0",
+      "n_observations": 1,
+      "n_gt": 40,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 20,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 40
+    },
+    {
+      "id": "n1_inputs_00_outputs_1",
+      "n_observations": 1,
+      "n_gt": 25,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 14,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.56,
+        "novelty_rate": 0.56,
+        "recovery_rate": 0.56
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 25
+    },
+    {
+      "id": "n1_inputs_01_outputs_0",
+      "n_observations": 1,
+      "n_gt": 38,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 17,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4473684210526316,
+        "novelty_rate": 0.4473684210526316,
+        "recovery_rate": 0.4473684210526316
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 38
+    },
+    {
+      "id": "n1_inputs_01_outputs_1",
+      "n_observations": 1,
+      "n_gt": 27,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 17,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6296296296296297,
+        "novelty_rate": 0.6296296296296297,
+        "recovery_rate": 0.6296296296296297
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 27
+    },
+    {
+      "id": "n1_inputs_10_outputs_0",
+      "n_observations": 1,
+      "n_gt": 38,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 17,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4473684210526316,
+        "novelty_rate": 0.4473684210526316,
+        "recovery_rate": 0.4473684210526316
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 38
+    },
+    {
+      "id": "n1_inputs_10_outputs_1",
+      "n_observations": 1,
+      "n_gt": 27,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 17,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6296296296296297,
+        "novelty_rate": 0.6296296296296297,
+        "recovery_rate": 0.6296296296296297
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 27
+    },
+    {
+      "id": "n1_inputs_11_outputs_0",
+      "n_observations": 1,
+      "n_gt": 37,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 14,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3783783783783784,
+        "novelty_rate": 0.3783783783783784,
+        "recovery_rate": 0.3783783783783784
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 37
+    },
+    {
+      "id": "n1_inputs_11_outputs_1",
+      "n_observations": 1,
+      "n_gt": 28,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 20,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.7142857142857143,
+        "novelty_rate": 0.7142857142857143,
+        "recovery_rate": 0.7142857142857143
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 28
+    },
+    {
+      "id": "n2_inputs_00_01_outputs_00",
+      "n_observations": 2,
+      "n_gt": 26,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 12,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.46153846153846156,
+        "novelty_rate": 0.46153846153846156,
+        "recovery_rate": 0.46153846153846156
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 26
+    },
+    {
+      "id": "n2_inputs_00_01_outputs_01",
+      "n_observations": 2,
+      "n_gt": 14,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5714285714285714,
+        "novelty_rate": 0.5714285714285714,
+        "recovery_rate": 0.5714285714285714
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 14
+    },
+    {
+      "id": "n2_inputs_00_01_outputs_10",
+      "n_observations": 2,
+      "n_gt": 12,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 5,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4166666666666667,
+        "novelty_rate": 0.4166666666666667,
+        "recovery_rate": 0.4166666666666667
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 12
+    },
+    {
+      "id": "n2_inputs_00_01_outputs_11",
+      "n_observations": 2,
+      "n_gt": 13,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6923076923076923,
+        "novelty_rate": 0.6923076923076923,
+        "recovery_rate": 0.6923076923076923
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 13
+    },
+    {
+      "id": "n2_inputs_00_10_outputs_00",
+      "n_observations": 2,
+      "n_gt": 26,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 12,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.46153846153846156,
+        "novelty_rate": 0.46153846153846156,
+        "recovery_rate": 0.46153846153846156
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 26
+    },
+    {
+      "id": "n2_inputs_00_10_outputs_01",
+      "n_observations": 2,
+      "n_gt": 14,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5714285714285714,
+        "novelty_rate": 0.5714285714285714,
+        "recovery_rate": 0.5714285714285714
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 14
+    },
+    {
+      "id": "n2_inputs_00_10_outputs_10",
+      "n_observations": 2,
+      "n_gt": 12,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 5,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4166666666666667,
+        "novelty_rate": 0.4166666666666667,
+        "recovery_rate": 0.4166666666666667
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 12
+    },
+    {
+      "id": "n2_inputs_00_10_outputs_11",
+      "n_observations": 2,
+      "n_gt": 13,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6923076923076923,
+        "novelty_rate": 0.6923076923076923,
+        "recovery_rate": 0.6923076923076923
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 13
+    },
+    {
+      "id": "n2_inputs_00_11_outputs_00",
+      "n_observations": 2,
+      "n_gt": 24,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 24
+    },
+    {
+      "id": "n2_inputs_00_11_outputs_01",
+      "n_observations": 2,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 12,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n2_inputs_00_11_outputs_10",
+      "n_observations": 2,
+      "n_gt": 13,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.46153846153846156,
+        "novelty_rate": 0.46153846153846156,
+        "recovery_rate": 0.46153846153846156
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 13
+    },
+    {
+      "id": "n2_inputs_00_11_outputs_11",
+      "n_observations": 2,
+      "n_gt": 12,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 12
+    },
+    {
+      "id": "n2_inputs_01_10_outputs_00",
+      "n_observations": 2,
+      "n_gt": 22,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.36363636363636365,
+        "novelty_rate": 0.36363636363636365,
+        "recovery_rate": 0.36363636363636365
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 22
+    },
+    {
+      "id": "n2_inputs_01_10_outputs_01",
+      "n_observations": 2,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5625,
+        "novelty_rate": 0.5625,
+        "recovery_rate": 0.5625
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n2_inputs_01_10_outputs_10",
+      "n_observations": 2,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5625,
+        "novelty_rate": 0.5625,
+        "recovery_rate": 0.5625
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n2_inputs_01_10_outputs_11",
+      "n_observations": 2,
+      "n_gt": 11,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.7272727272727273,
+        "novelty_rate": 0.7272727272727273,
+        "recovery_rate": 0.7272727272727273
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 11
+    },
+    {
+      "id": "n2_inputs_01_11_outputs_00",
+      "n_observations": 2,
+      "n_gt": 26,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.34615384615384615,
+        "novelty_rate": 0.34615384615384615,
+        "recovery_rate": 0.34615384615384615
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 26
+    },
+    {
+      "id": "n2_inputs_01_11_outputs_01",
+      "n_observations": 2,
+      "n_gt": 12,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 12
+    },
+    {
+      "id": "n2_inputs_01_11_outputs_10",
+      "n_observations": 2,
+      "n_gt": 11,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 5,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.45454545454545453,
+        "novelty_rate": 0.45454545454545453,
+        "recovery_rate": 0.45454545454545453
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 11
+    },
+    {
+      "id": "n2_inputs_01_11_outputs_11",
+      "n_observations": 2,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 12,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n2_inputs_10_11_outputs_00",
+      "n_observations": 2,
+      "n_gt": 26,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 9,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.34615384615384615,
+        "novelty_rate": 0.34615384615384615,
+        "recovery_rate": 0.34615384615384615
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 26
+    },
+    {
+      "id": "n2_inputs_10_11_outputs_01",
+      "n_observations": 2,
+      "n_gt": 12,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 8,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 12
+    },
+    {
+      "id": "n2_inputs_10_11_outputs_10",
+      "n_observations": 2,
+      "n_gt": 11,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 5,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.45454545454545453,
+        "novelty_rate": 0.45454545454545453,
+        "recovery_rate": 0.45454545454545453
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 11
+    },
+    {
+      "id": "n2_inputs_10_11_outputs_11",
+      "n_observations": 2,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 12,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_000",
+      "n_observations": 3,
+      "n_gt": 16,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.375,
+        "novelty_rate": 0.375,
+        "recovery_rate": 0.375
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 16
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_001",
+      "n_observations": 3,
+      "n_gt": 10,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6,
+        "novelty_rate": 0.6,
+        "recovery_rate": 0.6
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 10
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_010",
+      "n_observations": 3,
+      "n_gt": 10,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6,
+        "novelty_rate": 0.6,
+        "recovery_rate": 0.6
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 10
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_011",
+      "n_observations": 3,
+      "n_gt": 4,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 4
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_100",
+      "n_observations": 3,
+      "n_gt": 6,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 6
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_101",
+      "n_observations": 3,
+      "n_gt": 6,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 6
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_110",
+      "n_observations": 3,
+      "n_gt": 6,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 6
+    },
+    {
+      "id": "n3_inputs_00_01_10_outputs_111",
+      "n_observations": 3,
+      "n_gt": 7,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.8571428571428571,
+        "novelty_rate": 0.8571428571428571,
+        "recovery_rate": 0.8571428571428571
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 7
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_000",
+      "n_observations": 3,
+      "n_gt": 18,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 18
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_001",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_010",
+      "n_observations": 3,
+      "n_gt": 6,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 6
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_011",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_100",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.375,
+        "novelty_rate": 0.375,
+        "recovery_rate": 0.375
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_101",
+      "n_observations": 3,
+      "n_gt": 4,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 4
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_110",
+      "n_observations": 3,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6,
+        "novelty_rate": 0.6,
+        "recovery_rate": 0.6
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n3_inputs_00_01_11_outputs_111",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_000",
+      "n_observations": 3,
+      "n_gt": 18,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 18
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_001",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_010",
+      "n_observations": 3,
+      "n_gt": 6,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 6
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_011",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_100",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.375,
+        "novelty_rate": 0.375,
+        "recovery_rate": 0.375
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_101",
+      "n_observations": 3,
+      "n_gt": 4,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 4
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_110",
+      "n_observations": 3,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6,
+        "novelty_rate": 0.6,
+        "recovery_rate": 0.6
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n3_inputs_00_10_11_outputs_111",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_000",
+      "n_observations": 3,
+      "n_gt": 18,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 18
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_001",
+      "n_observations": 3,
+      "n_gt": 4,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.5,
+        "novelty_rate": 0.5,
+        "recovery_rate": 0.5
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 4
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_010",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.375,
+        "novelty_rate": 0.375,
+        "recovery_rate": 0.375
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_011",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_100",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 3,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.375,
+        "novelty_rate": 0.375,
+        "recovery_rate": 0.375
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_101",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_110",
+      "n_observations": 3,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n3_inputs_01_10_11_outputs_111",
+      "n_observations": 3,
+      "n_gt": 8,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 6,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.75,
+        "novelty_rate": 0.75,
+        "recovery_rate": 0.75
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 8
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0000",
+      "n_observations": 4,
+      "n_gt": 13,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 4,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3076923076923077,
+        "novelty_rate": 0.3076923076923077,
+        "recovery_rate": 0.3076923076923077
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 13
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0001",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0010",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4,
+        "novelty_rate": 0.4,
+        "recovery_rate": 0.4
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0011",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 4,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.8,
+        "novelty_rate": 0.8,
+        "recovery_rate": 0.8
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0100",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4,
+        "novelty_rate": 0.4,
+        "recovery_rate": 0.4
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0101",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 4,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.8,
+        "novelty_rate": 0.8,
+        "recovery_rate": 0.8
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0110",
+      "n_observations": 4,
+      "n_gt": 1,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 0,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.0,
+        "novelty_rate": 0.0,
+        "recovery_rate": 0.0
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 1
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_0111",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1000",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.4,
+        "novelty_rate": 0.4,
+        "recovery_rate": 0.4
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1001",
+      "n_observations": 4,
+      "n_gt": 1,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 0,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.0,
+        "novelty_rate": 0.0,
+        "recovery_rate": 0.0
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 1
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1010",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 1,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1011",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1100",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 1,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.3333333333333333,
+        "novelty_rate": 0.3333333333333333,
+        "recovery_rate": 0.3333333333333333
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1101",
+      "n_observations": 4,
+      "n_gt": 3,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.6666666666666666,
+        "novelty_rate": 0.6666666666666666,
+        "recovery_rate": 0.6666666666666666
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 3
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1110",
+      "n_observations": 4,
+      "n_gt": 2,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 2,
+      "oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 2
+    },
+    {
+      "id": "n4_inputs_00_01_10_11_outputs_1111",
+      "n_observations": 4,
+      "n_gt": 5,
+      "stored_duplicate_keys": 0,
+      "membership_matches_observations_within_supplied_universe": true,
+      "gt_valid_by_official": 4,
+      "oracle_replay_metrics": {
+        "valid_rate": 0.8,
+        "novelty_rate": 0.8,
+        "recovery_rate": 0.8
+      },
+      "corrected_oracle_replay_metrics": {
+        "valid_rate": 1.0,
+        "novelty_rate": 1.0,
+        "recovery_rate": 1.0
+      },
+      "calls": 5
+    }
+  ]
+}
